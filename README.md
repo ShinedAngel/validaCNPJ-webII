@@ -1,2 +1,1 @@
-# validaCNPJ-webII
-Validador de CNPJ em Angular e TS
+# Validador de CNPJ em Angular 7
