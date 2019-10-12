@@ -1,0 +1,17 @@
+<form id="formulario">
+  <h1>Cadastro de Empresas</h1><br><br>
+  <label for="nomeFantasia">Nome Fantasia: </label><br>
+  <input autocomplete="off" type="text" name="nomeFantasia" [(ngModel)]="Fornecedores.NomeFantasia">
+  <br>
+  <label for="razaoSocial">Razão Social: </label><br>
+  <input autocomplete="off" type="text" name="razaoSocial" [(ngModel)]="Fornecedores.RazaoSocial">
+  <br>
+  <label for="cnpj">CNPJ: </label><br>
+  <input autocomplete="off" type="text" name="cnpj" [(ngModel)]="Fornecedores.CNPJ">
+  <div id="cpfInvalido" *ngIf="!Fornecedores.Valido()">
+    CNPJ Inválido!
+  </div>
+  <div *ngIf="Fornecedores.Valido()">
+    <input type="button" value="Enviar" id="button" (click)="salvar()">
+  </div>
+</form>
